@@ -1,5 +1,6 @@
 .card{
-    background-color:'blue';
-    height:'200px';
+    background-color:'green';
     width:'200px';
+    height:'350px';
+    margin:'10px';
 }
