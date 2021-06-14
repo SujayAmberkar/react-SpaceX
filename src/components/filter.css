@@ -1,0 +1,22 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    align-items: center;
+}
+
+button{
+    background-color:#A3CB38;
+    border-width:0;
+    width: 10vh;
+    border-radius: 4px;
+    padding:2px;
+    margin: 2px;
+    margin-left:15px;
+}
+button:hover{
+    background-color:#6ab04c;
+}
+    
+
+
