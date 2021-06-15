@@ -19,13 +19,13 @@ function Main() {
     return (
 
         <div>
-            <Flexbox flexDirection="row" minHeight="100%"  marginTop='0px'>
-                <Flexbox className="filter-flex" element="header">
+            <div className="container">
+                <Flexbox className="filter-flex box" element="header">
                     <Filters missions={allMissions} setMission={setMission}/>
                 </Flexbox>
                 
                 <Flexbox flexGrow={1} >
-                    <div className="card-array">
+                    <div className="card-array box ">
                         {missions.map(mission=>{
                                 return <Card mission={mission}/>
                             })}
@@ -33,7 +33,7 @@ function Main() {
                     
                 </Flexbox>
                                
-            </Flexbox>
+            </div>
             
         </div>
     )
