@@ -1,0 +1,10 @@
+.card{
+    background-color:#dfe6e9;
+    width:250px;
+    height:280px;
+    margin:1ch;
+    padding: 1ch;
+    border-radius:5px;
+}
+
+/* style={{ ,,,, }} */

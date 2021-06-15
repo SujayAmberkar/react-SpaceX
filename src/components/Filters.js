@@ -1,5 +1,5 @@
 import React from 'react'
-import './filter.css'
+import './style/filter.css'
 function Filters(props) {
 
     const applyFilter=(year)=>{

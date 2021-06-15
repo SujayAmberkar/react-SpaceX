@@ -11,10 +11,10 @@ button{
     border-radius: 4px;
     padding:2px;
     margin: 2px;
-    margin-left:15px;
+    
 }
 button:hover{
-    background-color:#6ab04c;
+    background-color:#6ea556;
 }
     
 
