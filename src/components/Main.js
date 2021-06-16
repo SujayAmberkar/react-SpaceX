@@ -16,6 +16,18 @@ function Main() {
             console.log(res.data);
         })   
     },[])
+
+    // const applyFilter=(year)=>{
+    //     console.log(props.missions);
+    //     const res = props.missions.filter(mission=>
+    //         mission.launch_year==year
+    //     )
+    // props.setMission(res)
+    // }
+
+
+
+
     return (
 
         <div>

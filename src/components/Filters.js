@@ -1,14 +1,42 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './style/filter.css'
+import axios from 'axios';
 function Filters(props) {
 
+    const [year, setyear] = useState()
+
     const applyFilter=(year)=>{
+        setyear(year)
         console.log(props.missions);
         const res = props.missions.filter(mission=>
             mission.launch_year==year
         )
-    props.setMission(res)
+        props.setMission(res)
     }
+
+    const applyLaunchFilter=(bool)=>{
+        axios.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${bool}`)
+        .then((res)=>{
+            if(year){
+                const result = res.data.filter(mission=>
+                    mission.launch_year==year
+                )
+                props.setMission(result)
+                return
+            }
+            props.setMission(res.data)
+            console.log(res.data);
+        })
+    }
+    
+    const applyLandFilter=(bool)=>{
+        axios.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=${bool}`)
+        .then((res)=>{
+            props.setMission(res.data)
+            console.log(res.data);
+        })
+    }
+
     return (
         <div margin="1px">
             <strong>Filters</strong>
@@ -41,8 +69,8 @@ function Filters(props) {
                 <text>Successful Launch</text>
                 <hr style={{width:'130px', color:'#c8d6e5'}}/>
                 <div className="wrapper" padding="1px" >
-                    <button>True</button>
-                    <button>False</button>
+                    <button onClick={()=>{applyLaunchFilter(true)}}>True</button>
+                    <button onClick={()=>{applyLaunchFilter(false)}}>False</button>
                 </div>
             </div>
             <div className="land" style={{textAlign:'center'}}>
@@ -50,8 +78,8 @@ function Filters(props) {
                 <text>Successful Landing</text>
                 <hr style={{width:'130px', color:'#c8d6e5'}}/>
                 <div className="wrapper" padding="1px" >
-                    <button>True</button>
-                    <button>False</button>
+                    <button onClick={()=>{applyLandFilter(true)}}>True</button>
+                    <button onClick={()=>{applyLandFilter(false)}}>False</button>
                 </div>
             </div>
         </div>

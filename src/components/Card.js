@@ -4,7 +4,9 @@ function Card(props) {
     return (
         <div> 
             <div  className='card'>
-                <img src={props.mission.links.mission_patch_small} width="150px" alt="patch"></img><br/>
+                <div >
+                    <img src={props.mission.links.mission_patch_small} width="150px" alt="patch"></img><br/>
+                </div>
                 <div style={{textAlign:'left',padding:'5px'}} >
                     <text><strong>{props.mission.mission_name}</strong></text><br/>
                     <text><strong>Mission Id: </strong>{props.mission.mission_id}</text><br/>
