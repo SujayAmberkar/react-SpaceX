@@ -6,11 +6,12 @@
 
 button{
     background-color:#A3CB38;
-    border-width:0;
-    width: 10vh;
+    border: none;
+    width: initial;
     border-radius: 4px;
-    padding:2px;
+    padding:3px;
     margin: 2px;
+    place-content: inherit;
     
 }
 button:hover{

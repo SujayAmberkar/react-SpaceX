@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Flexbox from 'flexbox-react';
 import Filters from './Filters'
-import Card from './card'
+import Card from './Card'
 import axios from 'axios';
 import './style/main.css';
 
@@ -20,21 +20,21 @@ function Main() {
 
         <div>
             <div className="container">
-                <Flexbox className="filter-flex box" element="header">
+                <Flexbox className="filter-flex" element="header">
                     <Filters missions={allMissions} setMission={setMission}/>
                 </Flexbox>
                 
-                <Flexbox flexGrow={1} >
-                    <div className="card-array box ">
+                <Flexbox flexGrow={1} className="card-flex">
+                    <div className="card-array">
                         {missions.map(mission=>{
                                 return <Card mission={mission}/>
                             })}
                     </div>
                     
                 </Flexbox>
-                               
+                            
             </div>
-            
+            <h1>Developed by: Sujay Amberkar</h1>
         </div>
     )
 }

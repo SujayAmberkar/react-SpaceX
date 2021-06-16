@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 .container{
     /* flexDirection="row" minHeight="100%"  marginTop='0px' */
     display: flex;
@@ -17,23 +21,46 @@
 
 .card-array{    
     display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
     /* flex-wrap: wrap-reverse; */
-    width: 1350px;
-    height: inherit;
+    /* width: 1350px; */
+    height: 80vh;
     flex-flow: wrap;
+    place-content: inherit;
 }
 
 @media screen and (max-width:900px) {
     .container{
         flex-direction: column;
         flex-flow: inherit;
+        place-content: center;
     }
 }
 
 @media screen and (max-width:600px) {
     .container{
         flex-direction: column;
+        align-items: center;
     }
+    .filter-flex{
+        width: 250px;
+        place-content: center;
+    }
+    
+}
+
+@media screen and (max-width:569px) {
+    .container{
+        flex-direction: column;
+        place-content: center;
+        
+    }
+    .card-array{
+        margin-left: 13vw;
+        vertical-align: initial;
+    }
+    
 }
 
 
