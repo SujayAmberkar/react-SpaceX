@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    overflow: auto;
 }
 
 .container{
@@ -12,8 +13,9 @@
 .filter-flex{
     /* width="200px"; height="500px" margin="10px" padding="1px"  style={{backgroundColor:'',borderRadius:'5px'}} */
     background-color:#dfe6e9;
-    width: fit-content;
-    height: 100%;
+    place-content: center;
+    width: 10vw;
+    height: fit-content;
     margin: 1vh;
     padding: 10px;
     border-radius: 5px;
@@ -21,20 +23,23 @@
 
 .card-array{    
     display: flex;
-    overflow: scroll;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* flex-wrap: wrap-reverse; */
     /* width: 1350px; */
     height: 80vh;
     flex-flow: wrap;
     place-content: inherit;
+    width: 76vw;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1100px) {
     .container{
         flex-direction: column;
         flex-flow: inherit;
         place-content: center;
+    }
+    .filter-flex{
+        width: fit-content;
     }
 }
 
@@ -42,23 +47,27 @@
     .container{
         flex-direction: column;
         align-items: center;
+        
     }
     .filter-flex{
         width: 250px;
         place-content: center;
+        
     }
     
 }
 
-@media screen and (max-width:569px) {
+@media screen and (max-width:600px) {
     .container{
         flex-direction: column;
         place-content: center;
         
     }
     .card-array{
-        margin-left: 13vw;
-        vertical-align: initial;
+        margin-left: 3vw;
+        justify-content: center;
+        
+        
     }
     
 }
