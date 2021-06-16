@@ -17,16 +17,6 @@ function Main() {
         })   
     },[])
 
-    // const applyFilter=(year)=>{
-    //     console.log(props.missions);
-    //     const res = props.missions.filter(mission=>
-    //         mission.launch_year==year
-    //     )
-    // props.setMission(res)
-    // }
-
-
-
 
     return (
 
@@ -47,6 +37,7 @@ function Main() {
                             
             </div>
             <h1>Developed by: Sujay Amberkar</h1>
+            
         </div>
     )
 }
